@@ -1,0 +1,19 @@
+.page-content {
+    margin-top: 56px;
+}
+.exception.list-block .item-title {
+    white-space: normal;
+}
+.exception.content-block-title {
+    position: relative;
+    margin: 0;
+    white-space: normal;
+    font-size: 14px;
+    line-height: 1;
+    margin: 16px 16px 16px;
+    padding-top: 16px;
+    height: auto;
+    line-height: 16px;
+    font-weight: 500;
+    color: rgba(0,0,0,.54);
+}

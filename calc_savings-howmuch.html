@@ -1,0 +1,89 @@
+
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Voltar</span></a></div>
+		<div class="center sliding">About</div>
+		<div class="right">
+			<!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+		</div>
+	</div>
+</div>
+<div class="pages">
+	<!-- Page, data-page contains page name-->
+	<div data-page="about" class="page">
+		<!-- Scrollable page content-->
+		<div class="page-content">
+		    <div class="exception content-block-title">
+		    	<div class="left"><a href="#" class="back link"><span>Voltar</span></a></div>
+		    	<p>Neste exercício podemos admitir uma poupança inicial e reforços mensais aplicados a uma determinada taxa de juro, durante um determinado período de tempo. Em função das hipóteses admitidas obtém-se uma determinada poupança no final do período.</p>
+	    	</div>
+		    <div class="budget_1 list-block">
+		        <ul>
+		            <li>
+		                <div class="item-content">
+		                    <div class="item-inner">
+		                        <div class="item-title label">O que desejo</div>
+		                        <div class="item-input">
+		                            <input type="text" name="final_value" placeholder="Valor final livre de impostos"/>
+		                        </div>
+		                    </div>
+		                </div>
+		            </li>
+		            <li>
+		                <div class="item-content">
+		                    <div class="item-inner">
+		                        <div class="item-title label">O que já tenho</div>
+		                        <div class="item-input">
+		                            <input type="text" name="initial_value" placeholder="Poupança inicial"/>
+		                        </div>
+		                    </div>
+		                </div>
+		            </li>
+		            <li>
+		                <div class="item-content">
+		                    <div class="item-inner">
+		                        <div class="item-title label">Quanto tempo</div>
+		                        <div class="item-input">
+		                            <input type="text" name="months" placeholder="Nº de períodos em (meses)"/>
+		                        </div>
+		                    </div>
+		                </div>
+		            </li>
+		            <li>
+		                <div class="item-content">
+		                    <div class="item-inner">
+		                        <div class="item-title label">Juro Bruto</div>
+		                        <div class="item-input">
+		                            <input type="text" name="tanb" placeholder="Taxa de juro (TANB)"/>
+		                        </div>
+		                    </div>
+		                </div>
+		            </li>
+		            <li>
+		                <div class="item-content">
+		                    <div class="item-inner">
+		                        <div class="item-title label">Imposto</div>
+		                        <div class="item-input">
+		                            <input type="text" name="irs" placeholder="Retenção na fonte"/>
+		                        </div>
+		                    </div>
+		                </div>
+		            </li>
+		        </ul>
+		    </div>
+		    <div class="content-block">
+		        <div class="row">
+		            <div class="col-50"><a href="#" class="button clear-form button-big button-fill color-red">Cancelar</a></div>
+		            <div class="col-50">
+		                <input type="submit" value="Calcular" class="button button-big button-fill color-green"/>
+		            </div>
+		        </div>
+		    </div>
+		    <br><br><br>
+		</div>
+
+	</div>
+</div>
+
