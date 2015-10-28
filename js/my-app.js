@@ -54,11 +54,58 @@ myApp.onPageInit('about', function (page) {
 
                 $$('.popup-result').on('opened', function () {
                     $$('.result').html(
-                        'Precisa de poupar <strong>'+savingsValueMonth+'€</strong> por mês para atingir o seu objetivo.' +
+                        'Precisa de poupar <strong>'+ Number((savingsValueMonth).toFixed(1)) +'€</strong> por mês para atingir o seu objetivo.' +
                         '<br><br>' +
                         'O valor acomulado das suas poupanças precisa de ser <strong>'+valueInSavings+'€</strong>.' +
                         '<br><br>' +
                         'O valor em juros recebido é <strong>'+rounded_liquidTax_final+'€</strong>.'
+                    );
+                });
+
+
+            }
+        });
+
+    });
+
+
+    $$('.btn-time-saved').on('click', function () {
+
+        $$('.budget_2').find('.item-input input').each(function(index, el) {
+            if(!$$(this).val()) {
+
+                alert('Preencha todos os campos.');
+                return false;
+
+            } else {
+
+                var finalValue = $$('input[name="final_value"]').val(), // 1000
+                    initialValue = $$('input[name="initial_value"]').val(), //100 ou 0
+                    value_per_month = $$('input[name="month_value"]').val(), // 200
+                    tanb = $$('input[name="tanb"]').val(),
+                    irs = $$('input[name="irs"]').val();
+
+                var value_i_need = finalValue - initialValue; // 1000-100 = 900
+                var number_of_months =  value_i_need/value_per_month, // Meses = 900/200 = 4,5
+                    liquidTax = (100-irs)/100,
+                    liquidTax_final = finalValue*((tanb/100)*liquidTax)*(number_of_months/12),
+                    rounded_liquidTax_final = Math.round(liquidTax_final * 100) / 100;
+
+                var value_plus_tax = parseInt(finalValue) + parseFloat(liquidTax_final);
+
+                myApp.popup('.popup-result');
+
+                $$('.popup-result').on('opened', function() {
+                    $$('.result').html(
+                        'Precisa de poupar durante <strong>'+ Number((number_of_months).toFixed(1)) +' meses</strong> para atingir o seu objetivo.' +
+                        '<br><br>' +
+                        'Ao fim de <strong>'+ Number((number_of_months).toFixed(1)) +' meses</strong>. A sua poupança será de <strong>'+value_plus_tax+'€</strong>.' +
+                        '<br><br>' +
+                        'Valor de juros recebido  <strong>'+rounded_liquidTax_final+'€</strong>.' +
+                        '<br>' +
+                        'Valor mensal de poupança <strong>'+value_i_need+'€</strong>.' +
+                        '<br>' +
+                        'Valor com que começou a poupança <strong>'+initialValue+'€</strong>.'
                     );
                 });
 

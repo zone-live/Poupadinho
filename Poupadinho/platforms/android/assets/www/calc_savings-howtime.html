@@ -3,8 +3,8 @@
 <!-- Top Navbar-->
 <div class="navbar">
   <div class="navbar-inner">
-    <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
-    <div class="center sliding">Services</div>
+    <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Voltar</span></a></div>
+    <div class="center sliding">About</div>
     <div class="right">
       <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
     </div>
@@ -12,17 +12,78 @@
 </div>
 <div class="pages">
   <!-- Page, data-page contains page name-->
-  <div data-page="services" class="page">
+  <div data-page="about" class="page">
     <!-- Scrollable page content-->
     <div class="page-content">
-      <div class="content-block">
-        <div class="content-block-inner">
-          <p>Here is Services page!</p>
-          <p>Go <a href="#" class="back">back</a> or go to <a href="about.html">About</a> page.</p>
-          <p>Mauris posuere sit amet metus id venenatis. Ut ante dolor, tempor nec commodo rutrum, varius at sem. Nullam ac nisi non neque ornare pretium. Nulla mauris mauris, consequat et elementum sit amet, egestas sed orci. In hac habitasse platea dictumst.</p>
-          <p>Fusce eros lectus, accumsan eget mi vel, iaculis tincidunt felis. Nulla tincidunt pharetra sagittis. Fusce in felis eros. Nulla sit amet aliquam lorem, et gravida ipsum. Mauris consectetur nisl non sollicitudin tristique. Praesent vitae metus ac quam rhoncus mattis vel et nisi. Aenean aliquet, felis quis dignissim iaculis, lectus quam tincidunt ligula, et venenatis turpis risus sed lorem. Morbi eu metus elit. Ut vel diam dolor.</p>
+        <div class="exception content-block-title">
+          <div class="left"><a href="#" class="back link"><span>Voltar</span></a></div>
+          <p>Esta simulação calcula quanto tempo é necessário para que a poupança acumulada atinja um determinado montante objetivo.</p>
         </div>
-      </div>
+        <div class="budget_2 list-block">
+            <ul>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">O que desejo</div>
+                            <div class="item-input">
+                                <input type="text" name="final_value" placeholder="Valor final livre de impostos"/>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">O que já tenho</div>
+                            <div class="item-input">
+                                <input type="text" name="initial_value" placeholder="Poupança inicial"/>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">Fatia mensal</div>
+                            <div class="item-input">
+                                <input type="text" name="month_value" placeholder="Poupança regular (meses)"/>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">Juro Bruto</div>
+                            <div class="item-input">
+                                <input type="text" name="tanb" placeholder="Taxa de juro (TANB)"/>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title label">Imposto</div>
+                            <div class="item-input">
+                                <input type="text" name="irs" placeholder="Retenção na fonte"/>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content-block">
+            <div class="row">
+                <div class="col-50"><a href="#" class="button clear-form button-big button-fill color-red">Cancelar</a></div>
+                <div class="col-50">
+                    <input type="submit" value="Calcular" class="button btn-time-saved button-big button-fill color-green"/>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
     </div>
+
   </div>
 </div>
+
