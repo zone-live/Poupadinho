@@ -1,9 +1,5 @@
-.page-content {
-    margin-top: 56px;
-}
-.exception.list-block .item-title {
-    white-space: normal;
-}
+.page-content { margin-top: 56px; }
+.exception.list-block .item-title { white-space: normal; }
 .exception.content-block-title {
     position: relative;
     margin: 0;
