@@ -17,3 +17,7 @@
     font-weight: 500;
     color: rgba(0,0,0,.54);
 }
+p {
+    margin: 1em 0;
+    display: inline-block;
+}
