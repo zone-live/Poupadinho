@@ -7,3 +7,4 @@ TO-DO:
 - Create new Phonegap project
 - Import files to new project
 - Recompile
+- Add Calc function: retire savings
