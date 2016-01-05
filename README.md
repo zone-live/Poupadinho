@@ -1,6 +1,5 @@
 # Poupadinho
 
-<<<<<<< HEAD
 Este simulador é uma ferramenta de apoio à evolução da sua poupança.
 
 #####To-do:
